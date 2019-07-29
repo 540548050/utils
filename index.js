@@ -8,3 +8,16 @@ function clone(obj){
     }
     return newObj;
 }
+//countDown
+function countDown(){
+    var timeoutSecond = 5 * 60;
+    var hours = Math.floor(this.timeoutSecond / 3600);
+    var minute = Math.floor((this.timeoutSecond % 3600) / 60);
+    var second = (this.timeoutSecond % 3600) % 60;
+
+    return {
+        hours: hours < 10 ? '0' + hours : hours,
+        minute: minute < 10 ? '0' + minute : minute,
+        second: second < 10 ? '0' + second : second,
+    }
+}
